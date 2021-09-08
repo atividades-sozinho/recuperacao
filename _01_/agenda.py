@@ -1,6 +1,3 @@
-from .contato import Contato
-from .tarefa import Tarefa
-
 class Agenda:
 
     def __init__(self):
