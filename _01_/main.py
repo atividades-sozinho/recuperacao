@@ -26,10 +26,10 @@ class Main:
         print('0. Sair do programa')
 
     def ler_opcao_menu(self):
-        opcao = input(' > ')
+        opcao = input(' Escolha um número ')
 
         if (opcao == '0'):
-            print('Obrigada por usar nosso software, finalizando execução')
+            print('Obrigado por usar esta agenda')
             self.em_execucao = False
             return
 
@@ -65,13 +65,13 @@ class Main:
         contato.set_cpf(cpf)
 
         self.agenda.add_contato(contato)
-        print('Contato adicionado com sucesso.')
+        print('Contato adicionado')
 
     def listar_contatos(self):
         print('Lista de contatos:')
         contatos_da_agenda = self.agenda.get_contatos()
         for indice, contato in enumerate(contatos_da_agenda):
-            print('Numero: ' + str(indice) + ' - Contato: ' + contato.get_nome() + ' / Tel: ' + contato.get_telefone())
+            print('Numero: ' + str(indice) + ' - Contato: ' + contato.get_nome() + ' / Telefone: ' + contato.get_telefone())
 
     def excluir_contato(self):
         self.listar_contatos()
@@ -139,7 +139,7 @@ class Main:
 
             tarefa_selecionada.set_status_concluida()
 
-        print('Tarefas concluidas com sucesso')
+        print('Tarefas concluídas')
 
     def definir_tarefas_pendentes(self):
         self.listar_tarefas()
@@ -157,7 +157,7 @@ class Main:
 
             tarefa_selecionada.set_status_pendente()
 
-        print('Tarefas marcadas como pendentes com sucesso')
+        print('Tarefas marcadas como pendentes')
 
 main = Main()
 

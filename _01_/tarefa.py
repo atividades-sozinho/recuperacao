@@ -3,7 +3,6 @@ class Tarefa:
     def __init__(self):
         self.__descricao = ''
         self.__status = ''
-
         self.set_status_pendente()
 
     def get_descricao(self):

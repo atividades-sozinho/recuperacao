@@ -1,5 +1,5 @@
-from recuperacao._01_.contato import Contato
-from recuperacao._01_.tarefa import Tarefa
+from .contato import Contato
+from .tarefa import Tarefa
 
 class Agenda:
 
