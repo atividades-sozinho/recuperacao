@@ -52,6 +52,8 @@ class Main:
 
 
     def cadastrar_contato(self):
+        #Adiciona o cadastro de contato, usando a classe Contato e os setters. Por fim, usa o append para adicionar o
+        # contato na lista de contatos.
         print('Novo contato')
         nome = input('Nome: ')
         telefone = input('Telefone: ')
@@ -68,12 +70,15 @@ class Main:
         print('Contato adicionado')
 
     def listar_contatos(self):
+        #Adiciona uma listagem de contatos, usando um getter da classe Agenda, e um for, usando o enumerate para criar
+        # uma listagem dos contatos
         print('Lista de contatos:')
         contatos_da_agenda = self.agenda.get_contatos()
         for indice, contato in enumerate(contatos_da_agenda):
             print('Numero: ' + str(indice) + ' - Contato: ' + contato.get_nome() + ' / Telefone: ' + contato.get_telefone())
 
     def excluir_contato(self):
+        #usa o remove na classe Agenda e Contatos para eliminar elementos da lista
         self.listar_contatos()
         indice_para_excluir = input('Digite o número do contato ')
 
